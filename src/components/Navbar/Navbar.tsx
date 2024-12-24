@@ -3,14 +3,14 @@
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation"; // Use next/navigation instead of next/router
+import { usePathname } from "next/navigation";
 import MegaDrawsLogo from "../../assets/mega_draws.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname(); // Get the current pathname
+  const pathname = usePathname();
 
   useEffect(() => {
     const navLinks = document.querySelectorAll(`.${styles.links} a`);
