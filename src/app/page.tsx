@@ -1,21 +1,19 @@
 import { UserButton } from "@clerk/nextjs";
-import { currentUser } from "@clerk/nextjs/server";
+import { connectMongoDb } from "@/config/db";
+import { getCurrentUserFromDb } from "@/server-actions/megaDrawsUsers";
 
+connectMongoDb();
 export default async function Home() {
-  const user = await currentUser();
-  let name = user?.firstName + " " + user?.lastName;
-  let email = user?.emailAddresses[0].emailAddress;
-  let clerkUserId = user?.id;
-  let profilePicture = user?.imageUrl;
+  const response = await getCurrentUserFromDb();
+  const { name, email, clerkUserId } = response.data;
 
   return (
     <div className="flex justify-center items-center h-screen">
-      {/* <UserButton /> */}
       <div className="flex flex-col gap-3">
+        <UserButton />
         <span>Name: {name}</span>
         <span>Email: {email}</span>
-        <span>clerk User Id: {clerkUserId}</span>
-        <img src={profilePicture} height={100} width={100} />
+        <span>Clerk User Id: {clerkUserId}</span>
       </div>
     </div>
   );
