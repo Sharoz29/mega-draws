@@ -1,0 +1,140 @@
+.footer {
+    padding: 40px 20px;
+    background-color: #19191f; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    z-index: 900;
+    width: 100%;
+  
+    .footerContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:50px;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+
+      div {
+        flex: 1; 
+      }
+    }
+  
+    h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: goldenrod; 
+    }
+  
+    p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+  
+    a {
+      text-decoration: none;
+      color: goldenrod; 
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: rgba(255, 217, 0, 0.787);
+      }
+    }
+  
+    .company {
+      flex: 1;
+      margin-top: 100px;
+      .excitingFont{
+        font-size: medium;
+        margin-bottom: 5px;
+      }
+
+      .listContainer{
+        display: flex;
+        flex-direction: row;
+        // align-items: center
+        gap:100px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 10px;
+  
+          a {
+            font-size: 14px;
+            color: goldenrod;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .playButtonContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .playButton{
+            padding: 20px 40px;
+            border: 1px solid goldenrod;
+            font-size:xx-large;
+            border-radius: 60px;
+        }
+
+    }
+    .footerDivRight{
+        margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .footerLogDiv {
+        flex: 1;
+        img{
+          width:150px;
+          height:150px;
+        }
+      }
+    }
+  
+    .social {
+      flex: 1;
+  
+      .socialIcons {
+        display: flex;
+        gap: 10px;
+  
+        a {
+          font-size: 18px;
+          color: goldenrod;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: rgba(255, 217, 0, 0.787);
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footerContent {
+        flex-direction: column;
+        align-items: flex-start;
+  
+        .company, .address, .newsletter, .social {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+
+  

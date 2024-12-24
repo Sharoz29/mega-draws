@@ -1,6 +1,7 @@
 import { UserButton } from "@clerk/nextjs";
 import { connectMongoDb } from "@/config/db";
 import { getCurrentUserFromDb } from "@/server-actions/megaDrawsUsers";
+import VideoCover from "@/components/VideoCover/VideoCover";
 
 connectMongoDb();
 export default async function Home() {
@@ -8,8 +9,15 @@ export default async function Home() {
   const { name, email, clerkUserId } = response.data;
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="h-screen">
       <div className="flex flex-col gap-3">
+        <VideoCover
+          source={"/lottery-tickets.mp4"}
+          header={"Unlock Big Wins with Mega Draws!"}
+          description={
+            "Enter now for your chance to win huge prizes in our exciting Mega Draws! The more you enter, the higher your chances to win. Don't miss out on the opportunity of a lifetime!"
+          }
+        />
         <UserButton />
         <span>Name: {name}</span>
         <span>Email: {email}</span>

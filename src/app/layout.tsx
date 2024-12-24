@@ -4,6 +4,7 @@ import "./auth.css";
 //@ts-ignore
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
+import LayoutProvider from "@/providers/LayoutProvider";
 
 export const metadata: Metadata = {
   title: "Mega Draws",
@@ -19,7 +20,9 @@ export default function RootLayout({
     <ClerkProvider afterSignOutUrl={"/sign-in"}>
       <html lang="en">
         <body>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <LayoutProvider>{children}</LayoutProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -25,8 +25,8 @@ const megaDrawsUserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-const megaDrawsUserModel = mongoose.model(
-  "megaDrawsUsers",
-  megaDrawsUserSchema
-);
+
+const megaDrawsUserModel =
+  mongoose.models.megaDrawsUsers ||
+  mongoose.model("megaDrawsUsers", megaDrawsUserSchema);
 export default megaDrawsUserModel;
