@@ -35,7 +35,7 @@ const features = [
   },
 ];
 
-const WhyChoose = () => {
+const WhyChooseUs = () => {
   return (
     <section className={styles.whyChooseSection}>
       <h2 className={styles.heading}>Why Choose</h2>
@@ -58,4 +58,4 @@ const WhyChoose = () => {
   );
 };
 
-export default WhyChoose;
+export default WhyChooseUs;

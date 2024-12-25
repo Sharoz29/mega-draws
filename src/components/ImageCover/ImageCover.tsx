@@ -1,7 +1,8 @@
+import Image from "next/image";
 import styles from "./ImageCover.module.scss";
 
 interface ImageCoverProps {
-  source: string;
+  source: string | any;
   header?: string;
   description?: string;
   objectPosition?: string;
@@ -12,18 +13,21 @@ export default function ImageCover({
   source,
   header,
   description,
-  objectPosition,
+  objectPosition = "center",
   altText = "Image cover",
 }: ImageCoverProps) {
   return (
     <section className={styles.imageContainer} aria-label="Image cover section">
-      <img
-        src={source}
-        alt={altText}
-        className={styles.bgImage}
-        style={{ objectPosition: objectPosition }}
-        loading="lazy"
-      />
+      <div className={styles.bgImageWrapper}>
+        <Image
+          src={source}
+          alt={altText}
+          layout="fill"
+          objectFit="cover"
+          objectPosition={objectPosition}
+          loading="lazy"
+        />
+      </div>
       <div className={styles.imageOverlayContent}>
         {header && <h1 className={styles.imageHeader}>{header}</h1>}
         {description && (
