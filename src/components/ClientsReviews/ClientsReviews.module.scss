@@ -46,10 +46,11 @@
         overflow: hidden;
   
         .reviewCard {
+          margin:10px 0;
           background: #fff;
           padding: 1.5rem;
           border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
           text-align: center;
           width: 280px;
           flex-shrink: 0;
