@@ -37,11 +37,11 @@ const Navbar = () => {
         </div>
         <div className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
           <a href="/">Home</a>
-          <a href="/how-it-works">How It Works</a>
           <a href="/about-us">About Us</a>
           <a href="/buy-tickets">Buy Tickets</a>
           <a href="/results">Results</a>
           <a href="/winners">Winners</a>
+          <a href="/faqs">FAQs</a>
         </div>
         <a href="/sign-in" className={styles.loginLink}>
           Login
