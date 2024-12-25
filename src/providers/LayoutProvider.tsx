@@ -9,7 +9,7 @@ export default function LayoutProvider({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div style={{ backgroundColor: "#f9f9f9" }}>
       <TopBar />
       <Navbar />
       {children}

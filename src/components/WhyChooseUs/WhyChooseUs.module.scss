@@ -1,0 +1,56 @@
+.whyChooseSection {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    margin: 50px 0;
+  
+    .heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    .subHeading {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 5rem;
+    }
+  
+    .featuresContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+  
+      .featureCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        text-align: center;
+        max-width: 350px;
+        height:400px;
+  
+        .icon {
+          height: auto;
+          margin-bottom: 1rem;
+        }
+  
+        .title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+  
+        .description {
+          font-size: 1rem;
+          color: #666;
+        }
+      }
+    }
+  }
+  

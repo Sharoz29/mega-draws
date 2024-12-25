@@ -1,4 +1,4 @@
-"use client"; // Mark the component as a Client Component
+"use client";
 
 import styles from "./Navbar.module.scss";
 import Image from "next/image";

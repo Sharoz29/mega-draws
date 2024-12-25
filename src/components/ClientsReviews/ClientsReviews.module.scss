@@ -1,0 +1,107 @@
+.clientsReviewsSection {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    margin-bottom: 50px;
+  
+    .heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    .subHeading {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 5rem;
+    }
+  
+    .slider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+  
+      .arrow {
+        background: #f0f0f0;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+  
+        &:hover {
+          background: #e0e0e0;
+        }
+      }
+  
+      .reviewsContainer {
+        display: flex;
+        gap: 1rem;
+        overflow: hidden;
+  
+        .reviewCard {
+          background: #fff;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          width: 280px;
+          flex-shrink: 0;
+  
+          .name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+          }
+  
+          .role {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 1rem;
+          }
+  
+          .rating {
+            margin-bottom: 1rem;
+  
+            .star {
+              font-size: 1.2rem;
+              color: #ffa500;
+              margin-right: 0.2rem;
+            }
+          }
+  
+          .feedback {
+            font-size: 1rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  
+    .pagination {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+      
+        .dot {
+          width: 10px;
+          height: 10px;
+          background: #ccc;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background 0.3s;
+      
+          &.activeDot {
+            background: #4caf50;
+          }
+        }
+      }
+  }
+  
