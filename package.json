@@ -22,7 +22,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.83.0",
-    "sass-loader": "^16.0.4"
+    "sass-loader": "^16.0.4",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^20",

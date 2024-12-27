@@ -1,4 +1,5 @@
 "use client";
+import usersGlobalStore, { UsersGlobalStoreType } from "@/store/usersStore";
 import {
   faBook,
   faHome,
@@ -17,6 +18,8 @@ import React, { useEffect, useState } from "react";
 export default function Sidebar() {
   const [showMenu, setShowMenu] = useState(true);
   const pathname = usePathname();
+  const { loggedInUserData }: UsersGlobalStoreType =
+    usersGlobalStore() as UsersGlobalStoreType;
 
   const adminMenu: any = [
     {
@@ -50,9 +53,30 @@ export default function Sidebar() {
       isActive: pathname === "/portals/admin/reports",
     },
   ];
-  const userAdmin: any = [];
+  const userMenu: any = [
+    {
+      name: "Home",
+      path: "/",
+      icons: faHome,
+      isActive: pathname === "/",
+    },
+    {
+      name: "Lotteries",
+      path: "/portals/user/lotteries",
+      icons: faBook,
+      isActive: pathname === "/portals/admin/lotteries",
+    },
+    {
+      name: "Tickets",
+      path: "/portals/admin/tickets",
+      icons: faTicket,
+      isActive: pathname === "/portals/admin/tickets",
+    },
+  ];
 
-  const [menusToShow, setMenusToShow] = useState<any[]>(adminMenu);
+  const [menusToShow, setMenusToShow] = useState<any[]>(
+    loggedInUserData?.isAdmin ? adminMenu : userMenu
+  );
 
   useEffect(() => {
     setMenusToShow(adminMenu);
