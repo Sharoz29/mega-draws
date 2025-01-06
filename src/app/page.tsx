@@ -9,10 +9,10 @@ import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import LatestWinners from "@/components/LatestWinners/LatestWinners";
 import ClientsReviews from "@/components/ClientsReviews/ClientsReviews";
 
-connectMongoDb();
+// connectMongoDb();
 export default async function Home() {
-  const response = await getCurrentUserFromDb();
-  const { name, email, clerkUserId } = response.data;
+  // const response = await getCurrentUserFromDb();
+  // const { name, email, clerkUserId } = response.data;
 
   return (
     <div className="">
@@ -30,10 +30,10 @@ export default async function Home() {
         <WhyChooseUs />
         <LatestWinners />
         <ClientsReviews />
-        <UserButton />
+        {/* <UserButton />
         <span>Name: {name}</span>
         <span>Email: {email}</span>
-        <span>Clerk User Id: {clerkUserId}</span>
+        <span>Clerk User Id: {clerkUserId}</span> */}
       </div>
     </div>
   );

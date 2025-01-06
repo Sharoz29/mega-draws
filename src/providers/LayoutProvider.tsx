@@ -27,7 +27,7 @@ export default function LayoutProvider({
         throw new Error(response.message);
       }
     } catch (error: any) {
-      message.error(error.message);
+      message?.error(error?.message);
     } finally {
       setLoading(false);
     }

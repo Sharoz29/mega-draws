@@ -12,7 +12,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export default function Sidebar() {
@@ -20,6 +20,9 @@ export default function Sidebar() {
   const pathname = usePathname();
   const { loggedInUserData }: UsersGlobalStoreType =
     usersGlobalStore() as UsersGlobalStoreType;
+
+  const params = useParams();
+  const id = params.id;
 
   const adminMenu: any = [
     {
@@ -32,7 +35,10 @@ export default function Sidebar() {
       name: "Lotteries",
       path: "/portals/admin/lotteries",
       icons: faBook,
-      isActive: pathname === "/portals/admin/lotteries",
+      isActive:
+        pathname === "/portals/admin/lotteries" ||
+        pathname === "/portals/admin/lotteries/create" ||
+        pathname === `/portals/admin/lotteries/edit/${id}`,
     },
     {
       name: "Users",

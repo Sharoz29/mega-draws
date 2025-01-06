@@ -7,9 +7,9 @@ export default function PortalLayoutProvider({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-row gap-7">
+    <div className="flex flex-row gap-10">
       <Sidebar />
-      {children}
+      <div className="m-7 pr-5">{children}</div>
     </div>
   );
 }
